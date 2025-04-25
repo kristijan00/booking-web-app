@@ -1,0 +1,55 @@
+@import './fonts.css';
+
+:root {
+  /** primary **/
+  --color-primary             : #9b9281;
+  --color-secondary           : #d0a17d;
+  --color-tertiary            : #3c5c1c;
+  --color-primary-rgb         : 38, 89, 132;
+  --color-primary-contrast    : #f9f8fe;
+  --color-primary-contrast-rgb: 255, 255, 255;
+  --color-primary-shade       : #c2beb8;
+  --color-primary-tint        : #a0dbff;
+
+  /** success **/
+  --color-success             : #70ab69;
+  --color-success-transparent : #2dd36f57;
+  --color-success-rgb         : 45, 211, 111;
+  --color-success-contrast    : #ffffff;
+  --color-success-contrast-rgb: 255, 255, 255;
+  --color-success-shade       : #28ba62;
+  --color-success-tint        : #42d77d;
+
+  /** warning **/
+  --color-warning             : #F37C00;
+  --color-warning-rgb         : 255, 196, 9;
+  --color-warning-contrast    : white;
+  --color-warning-contrast-rgb: 0, 0, 0;
+  --color-warning-shade       : #e0ac08;
+  --color-warning-tint        : #ffca22;
+
+  /** danger **/
+  --color-danger             : #eb445a;
+  --color-danger-transparent : #eb445a57;
+  --color-danger-rgb         : 235, 68, 90;
+  --color-danger-contrast    : #ffffff;
+  --color-danger-contrast-rgb: 255, 255, 255;
+  --color-danger-shade       : #cf3c4f;
+  --color-danger-tint        : #ed576b;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin     : 0;
+  color      : black;
+}

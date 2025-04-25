@@ -1,0 +1,194 @@
+.mainContainer {
+  height: calc(100vh - 10vh);
+
+  .container {
+    height        : 100%;
+    display       : flex;
+    flex-direction: row;
+    padding       : 20px 40px;
+
+    .aboutTextContainer {
+      display         : flex;
+      flex-direction  : column;
+      height          : auto;
+      max-height      : 75%;
+      margin-top      : 80px;
+      margin-left     : 200px;
+      border-radius   : 5px;
+      z-index         : 100;
+      width           : 50%;
+      padding         : 40px 20px;
+      background-color: white;
+
+      h2 {
+        font-size  : 30px;
+        font-weight: 600;
+        color      : #343a40;
+      }
+
+      p {
+        font-size  : 18px;
+        color      : #6c757d;
+        line-height: 1.5;
+      }
+
+      .appointmentButton {
+        background-color: var(--color-secondary);
+        color           : white;
+        border          : none;
+        padding         : 10px 20px;
+        margin-top      : auto;
+        width           : 200px;
+        border-radius   : 5px;
+        font-size       : 1.2rem;
+        opacity         : 0.8;
+        cursor          : pointer;
+        transition      : opacity 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .imageContainer {
+      position        : absolute;
+      top             : 5%;
+      left            : 40%;
+      justify-content : center;
+      align-items     : center;
+      margin          : 5% auto;
+      height          : 80%;
+      width           : 50%;
+      background-color: #f0f0f0;
+
+      img {
+        border-radius: 5px;
+        object-fit   : cover;
+        width        : 100%;
+        height       : 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 391px) {
+  .mainContainer {
+    .container {
+      height        : 100%;
+      display       : flex;
+      flex-direction: row;
+      padding       : 0;
+
+      .aboutTextContainer {
+        height          : auto;
+        max-height      : 90%;
+        margin          : auto;
+        display         : flex;
+        flex-direction  : column;
+        align-items     : center;
+        justify-content : center;
+        border-radius   : 5px;
+        z-index         : 100;
+        width           : 85%;
+        padding         : 40px 20px;
+        background-color: white;
+        text-align      : center;
+
+        h2 {
+          font-size  : 26px;
+          font-weight: 600;
+          color      : #343a40;
+        }
+
+        p {
+          font-size  : 18px;
+          color      : #6c757d;
+          line-height: 1.5;
+        }
+
+        .appointmentButton {
+          background-color: var(--color-secondary);
+          color           : white;
+          border          : none;
+          padding         : 10px 20px;
+          width           : 200px;
+          font-size       : 18px;
+          opacity         : 1;
+          margin-top      : 10px;
+        }
+      }
+
+      .imageContainer {
+        top   : 7.5vh;
+        left  : 0;
+        margin: auto;
+        height: 100%;
+        width : 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .mainContainer {
+    .container {
+      height        : 100%;
+      display       : flex;
+      flex-direction: row;
+      padding       : 0;
+
+      .aboutTextContainer {
+        height          : 100%;
+        max-height      : 85%;
+        margin          : auto;
+        display         : flex;
+        flex-direction  : column;
+        align-items     : center;
+        justify-content : center;
+        border-radius   : 5px;
+        z-index         : 100;
+        width           : 90%;
+        padding         : 30px 20px;
+        background-color: white;
+        text-align      : center;
+
+        p {
+          font-size  : 14px;
+          color      : #6c757d;
+          line-height: 1.5;
+        }
+
+        .appointmentButton {
+          border   : none;
+          padding  : 10px 20px;
+          width    : 200px;
+          font-size: 16px;
+          opacity  : 1;
+        }
+      }
+
+      .imageContainer {
+        top   : 7.5vh;
+        left  : 0;
+        margin: auto;
+        height: 100%;
+        width : 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .mainContainer {
+    .container {
+      .aboutTextContainer {
+        max-height : 55%;
+        margin-top : 150px;
+        margin-left: 200px;
+        width      : 45%;
+        padding    : 40px;
+      }
+    }
+  }
+}

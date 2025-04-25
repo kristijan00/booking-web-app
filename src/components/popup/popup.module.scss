@@ -1,0 +1,58 @@
+@import '../../themes/animations.css';
+.popupContainer {
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  z-index         : 10000;
+  animation       : appear 0.35s ease-in-out forwards;
+
+  .popupContent {
+    background-color: white;
+    padding         : 20px;
+    border-radius   : 8px;
+    text-align      : center;
+    box-shadow      : 0 4px 8px rgba(0, 0, 0, 0.2);
+    width           : 450px;
+
+    h3 {
+      margin-bottom: 20px;
+      font-weight  : 600;
+    }
+
+    button {
+      background-color: var(--color-secondary);
+      color           : white;
+      border          : none;
+      padding         : 10px 40px;
+      border-radius   : 4px;
+      font-size       : 16px;
+      cursor          : pointer;
+      transition      : opacity 0.3s ease-in;
+      opacity         : 0.75;
+    }
+
+    button:hover {
+      opacity: 1;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size    : 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .popupContainer {
+    .popupContent {
+      width: 90%;
+    }
+  }
+}

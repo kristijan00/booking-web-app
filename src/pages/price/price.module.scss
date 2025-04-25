@@ -1,0 +1,158 @@
+@import '../../themes/animations.css';
+
+.mainContainer {
+  position: relative;
+  display       : flex;
+  flex-direction: column;
+  height        : calc(100vh - 10vh);
+  overflow-y    : hidden;
+
+  .scrollArrow {
+    display  : none;
+    position : absolute;
+    bottom   : 20px;
+    /* Position the arrow 20px above the bottom */
+    left     : 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    color    : #343a40;
+    animation: bounce 1.5s infinite;
+    z-index  : 100;
+  }
+
+  .container {
+    position      : relative;
+    display       : flex;
+    flex-direction: column;
+    height        : 100%;
+    width         : 70%;
+    margin        : 0 auto;
+    padding       : 20px 40px;
+
+    h2 {
+      font-weight  : 600;
+      margin-bottom: 40px;
+      margin-top   : 20px;
+    }
+
+    .priceContainer {
+      display              : grid;
+      grid-template-columns: 1fr 1fr;
+      /* Two equal-width columns */
+      gap                  : 20px;
+      /* Space between columns */
+
+
+      .subContainer {
+        display: contents;
+        /* Allow the grid to align the children directly */
+
+        padding: 10px 0;
+
+        .priceItem {
+          margin-bottom: 30px;
+          animation    : fadeIn 0.5s both calc(var(--count) * 70ms);
+
+          p {
+            font-size  : 16px;
+            color      : #343a40;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .mainContainer {
+    overflow-y: auto;
+
+    .scrollArrow {
+      display: block;
+    }
+
+    .container {
+      height : 100%;
+      width  : 90%;
+      padding: 10px 20px;
+
+
+      h2 {
+        font-weight: 600;
+        margin     : 20px 0 30px;
+      }
+
+      .priceContainer {
+        gap: 20px;
+        /* Space between columns */
+
+        .subContainer {
+          display: contents;
+          /* Allow the grid to align the children directly */
+
+          padding: 10px 0;
+
+          .priceItem {
+            margin-bottom: 30px;
+
+            p {
+              font-size  : 16px;
+              color      : #343a40;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 391px) {
+  .mainContainer {
+    overflow-y: auto;
+
+    .container {
+      height : 100%;
+      width  : 90%;
+      padding: 10px 20px;
+
+      h2 {
+        font-weight: 600;
+        margin     : 20px 0 30px;
+      }
+
+      .priceContainer {
+        gap: 30px;
+        /* Space between columns */
+
+        .subContainer {
+          display: contents;
+          /* Allow the grid to align the children directly */
+
+          padding: 10px 0;
+
+          .priceItem {
+            margin-bottom: 30px;
+
+            p {
+              font-size  : 16px;
+              color      : #343a40;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .mainContainer {
+    .container {
+      width  : 80%;
+      margin : 0 auto 0 20%;
+      padding: 80px 40px 20px;
+    }
+  }
+}

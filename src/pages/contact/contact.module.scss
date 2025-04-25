@@ -1,0 +1,213 @@
+@import '../../themes/animations.css';
+
+.mainContainer {
+  height: calc(100vh - 10vh);
+
+  .container {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    height         : 100%;
+    width          : 70%;
+    margin         : 0 auto;
+
+    .contactTextContainer {
+      width: 80%;
+
+      h2 {
+        font-weight: 600;
+        color      : #343a40;
+      }
+
+      p {
+        font-size  : 18px;
+        color      : #6c757d;
+        line-height: 1.5;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .contactForm {
+      width          : 80%;
+      margin         : 5px auto 0;
+      display        : flex;
+      justify-content: space-between;
+
+      form {
+        display       : flex;
+        flex-direction: column;
+        width         : 50%;
+
+        .field {
+          display       : flex;
+          flex-direction: column;
+
+          label {
+            font-size  : 18px;
+            color      : #343a40;
+            font-weight: 600;
+          }
+
+          input,
+          textarea {
+            width        : 100%;
+            padding      : 10px;
+            border-radius: 5px;
+            border       : 1px solid #ced4da;
+            font-size    : 16px;
+            color        : #495057;
+            animation    : fadeIn 0.5s both calc(var(--count) * 70ms);
+
+            &:focus {
+              border-color: var(--color-secondary);
+              outline     : none;
+            }
+          }
+
+          textarea {
+            resize: none;
+          }
+        }
+
+        .nameContainer {
+          display        : flex;
+          justify-content: space-between;
+          width          : 100%;
+          gap            : 50px;
+        }
+
+        .contactButton {
+          background-color: var(--color-secondary);
+          color           : white;
+          border          : none;
+          padding         : 10px 20px;
+          width           : 100%;
+          border-radius   : 5px;
+          font-size       : 18px;
+          opacity         : 0.8;
+          cursor          : pointer;
+          transition      : opacity 0.3s ease-in-out;
+          margin-top: 15px;
+          &:hover {
+            opacity: 1;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .mainContainer {
+    .container {
+      width: 100%;
+
+      .contactTextContainer {
+        margin-top: 5px;
+
+        p {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+
+      .contactForm {
+        width          : 100%;
+        margin         : 0px auto;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+
+        form {
+          display       : flex;
+          flex-direction: column;
+          width         : 80%;
+
+          .field {
+            max-height: 140px;
+            label {
+              font-size  : 14px;
+              color      : #343a40;
+              font-weight: 600;
+            }
+
+            input {
+              height: 40px;
+            }
+          }
+
+          .contactButton {
+            background-color: var(--color-secondary);
+            color           : white;
+            border          : none;
+            padding         : 10px 20px;
+            font-size       : 16px;
+            opacity         : 1;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 391px) {
+  .mainContainer {
+    .container {
+      width: 100%;
+
+      .contactTextContainer {
+        width: 80%;
+      }
+
+      .contactForm {
+        width          : 100%;
+        margin         : 5px auto 0;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+
+        form {
+          display       : flex;
+          flex-direction: column;
+          width         : 80%;
+
+          .field {
+            label {
+              font-size: 14px;
+            }
+
+            input {
+              height: 40px;
+            }
+          }
+
+          .contactButton {
+            font-size: 18px;
+            opacity  : 1;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .mainContainer {
+    .container {
+      .contactForm {
+        form {
+          width: 35%;
+        }
+      }
+    }
+  }
+}
