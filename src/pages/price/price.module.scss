@@ -69,8 +69,9 @@
   .mainContainer {
     overflow-y: auto;
     overflow-x: hidden;
-    height    : calc(100vh - 7.5vh);
-
+    height: calc(100dvh - 10vh); /* Use dynamic viewport height */
+    padding-bottom: env(safe-area-inset-bottom); /* Add safe area padding */
+    
     .scrollArrow {
       display: block;
     }
@@ -113,7 +114,8 @@
 @media (max-width: 768px) and (min-width: 391px) {
   .mainContainer {
     overflow-y: auto;
-    height    : calc(100vh - 7.5vh);
+    height: calc(100dvh - 10vh); /* Use dynamic viewport height */
+    padding-bottom: env(safe-area-inset-bottom); /* Add safe area padding */
 
     .container {
       height : 100%;
