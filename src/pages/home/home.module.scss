@@ -35,9 +35,9 @@
       }
 
       .contactButton {
-        position: relative;
-        display: flex;
-        justify-content: center;
+        position        : relative;
+        display         : flex;
+        justify-content : center;
         margin-top      : 20px;
         padding         : 10px 20px;
         background-color: var(--color-secondary);
@@ -51,7 +51,7 @@
         transition      : opacity 0.3s ease-in-out;
         border          : 0px;
         width           : 350px;
-        animation: bouncy 5s linear;
+        animation       : bouncy 5s linear;
 
         &:hover {
           opacity: 1;
@@ -86,7 +86,8 @@
           width      : 150px;
           font-size  : 14px;
           font-weight: 500;
-          padding         : 8px 60px;
+          padding    : 8px 60px;
+          animation  : fadeIn 1.5s;
         }
       }
     }
@@ -111,7 +112,8 @@
           width      : 130px;
           font-size  : 14px;
           font-weight: 500;
-          padding         : 10px 80px;
+          padding    : 10px 80px;
+          animation  : fadeIn 1.5s;
         }
       }
 
