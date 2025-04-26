@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://kristijan00.github.io/booking-web-app/",
+  "homepage": "https://kristijan00.github.io/booking-web-app/home",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

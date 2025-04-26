@@ -1,7 +1,7 @@
 @import '../../themes/animations.css';
 
 .mainContainer {
-  position: relative;
+  position      : relative;
   display       : flex;
   flex-direction: column;
   height        : calc(100vh - 10vh);
@@ -14,7 +14,7 @@
     /* Position the arrow 20px above the bottom */
     left     : 50%;
     transform: translateX(-50%);
-    font-size: 36px;
+    font-size: 30px;
     color    : #343a40;
     animation: bounce 1.5s infinite;
     z-index  : 100;
@@ -32,7 +32,7 @@
     h2 {
       font-weight  : 600;
       margin-bottom: 40px;
-      margin-top   : 20px;
+      margin-top   : 0;
     }
 
     .priceContainer {
@@ -50,8 +50,9 @@
         padding: 10px 0;
 
         .priceItem {
-          margin-bottom: 30px;
           animation    : fadeIn 0.5s both calc(var(--count) * 70ms);
+          border-radius: 5px;
+          padding      : 5px 0;
 
           p {
             font-size  : 16px;
@@ -67,6 +68,7 @@
 @media (max-width: 390px) {
   .mainContainer {
     overflow-y: auto;
+    overflow-x: hidden;
 
     .scrollArrow {
       display: block;
@@ -74,13 +76,14 @@
 
     .container {
       height : 100%;
-      width  : 90%;
+      width  : 95%;
       padding: 10px 20px;
+      margin : 0;
 
 
       h2 {
         font-weight: 600;
-        margin     : 20px 0 30px;
+        margin     : 20px 0;
       }
 
       .priceContainer {
@@ -94,8 +97,6 @@
           padding: 10px 0;
 
           .priceItem {
-            margin-bottom: 30px;
-
             p {
               font-size  : 16px;
               color      : #343a40;
@@ -123,7 +124,7 @@
       }
 
       .priceContainer {
-        gap: 30px;
+        gap: 35px;
         /* Space between columns */
 
         .subContainer {
@@ -136,7 +137,7 @@
             margin-bottom: 30px;
 
             p {
-              font-size  : 16px;
+              font-size  : 14px;
               color      : #343a40;
               font-weight: 500;
             }

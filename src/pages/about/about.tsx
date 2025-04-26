@@ -1,5 +1,5 @@
 import styles from './about.module.scss';
-import KristinaPicture from '../../assets/pictures/mobile-barbershop.jpeg';
+import KristinaPicture from '../../assets/pictures/mobile-barbershop.png';
 import { useNavigate } from 'react-router-dom';
 
 const About = () => {

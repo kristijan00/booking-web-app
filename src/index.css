@@ -14,19 +14,19 @@ div#root {
 }
 
 h1 {
-  font-size: 34px !important;
+  font-size: 28px !important;
 }
 
 h2 {
-  font-size: 30px !important;
-}
-
-h3 {
   font-size: 26px !important;
 }
 
+h3 {
+  font-size: 22px !important;
+}
+
 h4 {
-  font-size: 24px !important;
+  font-size: 20px !important;
 }
 
 @media (max-width: 390px) {
@@ -46,16 +46,16 @@ h4 {
 
 @media (max-width: 768px) and (min-width: 391px) {
   h1 {
-    font-size: 24px !important;
-  }
-  h2 {
     font-size: 22px !important;
   }
-  h3 {
+  h2 {
     font-size: 20px !important;
   }
-  h4 {
+  h3 {
     font-size: 18px !important;
+  }
+  h4 {
+    font-size: 16px !important;
   }
 }
 

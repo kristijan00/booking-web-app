@@ -1,26 +1,6 @@
 import styles from './price.module.scss';
-import { useEffect, useState } from 'react';
 
 const Price = () => {
-  const [showArrow, setShowArrow] = useState(false);
-
-  useEffect(() => {
-    const hasVisited = localStorage.getItem('hasVisitedPricePage');
-    if (!hasVisited) {
-      setShowArrow(true);
-      localStorage.setItem('hasVisitedPricePage', 'true');
-    }
-
-    const handleScroll = () => {
-      setShowArrow(false); // Hide the arrow after scrolling
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <div className={styles.mainContainer}>
@@ -69,11 +49,6 @@ const Price = () => {
           </div>
         </div>
       </div>
-      {showArrow && (
-        <div className={styles.scrollArrow}>
-          <span>↓</span>
-        </div>
-      )}
     </ div>
   );
 };
