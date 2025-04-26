@@ -70,9 +70,6 @@
 
 @media (max-width: 390px) {
   .mainContainer {
-    height: calc(100dvh - 10vh); /* Use dynamic viewport height */
-    padding-bottom: env(safe-area-inset-bottom); /* Add safe area padding */
-    
     .pictureContainer {
       height: calc(100vh - 7.5vh);
 
@@ -97,9 +94,6 @@
 
 @media (max-width: 768px) and (min-width: 391px) {
   .mainContainer {
-    height: calc(100dvh - 10vh); /* Use dynamic viewport height */
-    padding-bottom: env(safe-area-inset-bottom); /* Add safe area padding */
-
     .pictureContainer {
       height: calc(100vh - 7.5vh);
 

@@ -85,7 +85,7 @@
 
       .aboutTextContainer {
         height          : auto;
-        max-height      : 80%;
+        max-height      : 85%;
         margin          : auto;
         display         : flex;
         flex-direction  : column;
@@ -137,7 +137,7 @@
   .mainContainer {
   height: calc(100dvh - 10vh); /* Use dynamic viewport height */
   padding-bottom: env(safe-area-inset-bottom); /* Add safe area padding */
-  
+
     .container {
       height        : 100%;
       display       : flex;
