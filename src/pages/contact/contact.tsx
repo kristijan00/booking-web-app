@@ -31,10 +31,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID!,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+      .sendForm('service_kristijan',
+        'template_3y14uae',
         e.target as HTMLFormElement,
-        process.env.REACT_APP_EMAILJS_USER_ID!)
+        'XPey2nE5qecJwEz1R')
       .then(
         () => {
 
