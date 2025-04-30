@@ -7,19 +7,6 @@
   height        : calc(100vh - 10vh);
   overflow-y    : hidden;
 
-  .scrollArrow {
-    display  : none;
-    position : absolute;
-    bottom   : 20px;
-    /* Position the arrow 20px above the bottom */
-    left     : 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    color    : #343a40;
-    animation: bounce 1.5s infinite;
-    z-index  : 100;
-  }
-
   .container {
     position      : relative;
     display       : flex;
@@ -66,10 +53,6 @@
     overflow-y: auto;
     overflow-x: hidden;
 
-    .scrollArrow {
-      display: block;
-    }
-
     .container {
       height : 100%;
       width  : 100%;
@@ -112,7 +95,7 @@
           background-color    : white;
           flex                : 0 0 90vw;
           /* Each item takes up the full viewport width */
-          height              : 70vh;
+          height              : 50vh;
           /* Optional         : Make each item take up the full viewport height */
           scroll-snap-align   : start;
           /* Snap to the start of each item */
@@ -135,7 +118,7 @@
 
       .pagination {
         position       : absolute;
-        top            : 85%;
+        top            : 67%;
         left           : 50%;
         /* Center horizontally */
         transform      : translateX(-50%);
@@ -207,7 +190,7 @@
           background-color    : white;
           flex                : 0 0 90vw;
           /* Each item takes up the full viewport width */
-          height              : 50vh;
+          height              : 45vh;
           /* Optional         : Make each item take up the full viewport height */
           scroll-snap-align   : start;
           /* Snap to the start of each item */
@@ -229,7 +212,7 @@
 
       .pagination {
         position       : absolute;
-        top            : 68%;
+        top            : 64%;
         left           : 50%;
         /* Center horizontally */
         transform      : translateX(-50%);
