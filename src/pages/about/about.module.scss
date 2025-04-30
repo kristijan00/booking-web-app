@@ -85,7 +85,7 @@
       .aboutTextContainer {
         height          : auto;
         max-height      : 75%;
-        margin          : auto;
+        margin          : 20% auto auto;
         display         : flex;
         flex-direction  : column;
         align-items     : center;
@@ -142,8 +142,8 @@
       padding       : 0;
 
       .aboutTextContainer {
-        max-height      : 75%;
-        margin          : auto;
+        max-height      : 80%;
+        margin          : 15% auto auto;
         display         : flex;
         flex-direction  : column;
         align-items     : center;
