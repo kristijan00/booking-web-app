@@ -35,6 +35,10 @@
       margin-top   : 0;
     }
 
+    h3 {
+      font-weight  : 600;
+    }
+    
     .priceContainer {
       display              : grid;
       grid-template-columns: 1fr 1fr;
@@ -42,23 +46,15 @@
       gap                  : 20px;
       /* Space between columns */
 
+      .priceItem {
+        animation    : fadeIn 0.5s both calc(var(--count) * 70ms);
+        border-radius: 5px;
+        padding      : 5px 0;
 
-      .subContainer {
-        display: contents;
-        /* Allow the grid to align the children directly */
-
-        padding: 10px 0;
-
-        .priceItem {
-          animation    : fadeIn 0.5s both calc(var(--count) * 70ms);
-          border-radius: 5px;
-          padding      : 5px 0;
-
-          p {
-            font-size  : 16px;
-            color      : #343a40;
-            font-weight: 500;
-          }
+        p {
+          font-size  : 16px;
+          color      : #343a40;
+          font-weight: 500;
         }
       }
     }
@@ -69,8 +65,6 @@
   .mainContainer {
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100dvh - 10vh); /* Use dynamic viewport height */
-    padding-bottom: 60px; /* Add safe area padding */
 
     .scrollArrow {
       display: block;
@@ -78,7 +72,7 @@
 
     .container {
       height : 100%;
-      width  : 95%;
+      width  : 100%;
       padding: 20px;
       margin : 0;
 
@@ -88,22 +82,80 @@
         margin     : 20px 0;
       }
 
+      h3 {
+        font-weight  : 600;
+        margin-bottom: 20px;
+      }
+
       .priceContainer {
-        gap: 20px;
-        /* Space between columns */
+        position                  : relative;
+        display                   : flex;
+        /* Arrange items horizontally */
+        width                     : 100%;
+        flex-direction            : row;
+        /* Horizontal layout */
+        overflow-x                : scroll;
+        /* Enable horizontal scrolling */
+        scroll-snap-type          : x mandatory;
+        /* Snap to each item */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on mobile */
+        gap                       : 0;
+        /* Remove gaps between items */
+        scrollbar-width           : none;
+        /* Firefox */
+        margin-top                : 5%;
+        box-shadow                : 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Add shadow */
 
-        .subContainer {
-          display: contents;
-          /* Allow the grid to align the children directly */
+        .priceItem {
+          background-color    : white;
+          flex                : 0 0 90vw;
+          /* Each item takes up the full viewport width */
+          height              : 70vh;
+          /* Optional         : Make each item take up the full viewport height */
+          scroll-snap-align   : start;
+          /* Snap to the start of each item */
+          display             : flex;
+          flex-direction      : column;
+          justify-content     : center;
+          align-items         : center;
+          padding             : 10px;
+          box-sizing          : border-box;
+          border-radius       : 0px;
 
-          padding: 10px 0;
+          p {
+            font-size  : 16px;
+            color      : #343a40;
+            font-weight: 500;
+          }
+        }
 
-          .priceItem {
-            p {
-              font-size  : 16px;
-              color      : #343a40;
-              font-weight: 500;
-            }
+      }
+
+      .pagination {
+        position       : absolute;
+        top            : 85%;
+        left           : 50%;
+        /* Center horizontally */
+        transform      : translateX(-50%);
+        /* Adjust for the element's width */
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        gap            : 10px;
+        z-index        : 100;
+
+        .dot {
+          width           : 7px;
+          height          : 7px;
+          border-radius   : 50%;
+          background-color: var(--color-primary);
+          transition      : background-color 0.3s ease;
+
+          &.active {
+            background-color: black;
+            /* Highlight active dot */
           }
         }
       }
@@ -114,37 +166,90 @@
 @media (max-width: 768px) and (min-width: 391px) {
   .mainContainer {
     overflow-y: auto;
-    height: calc(100dvh - 10vh); /* Use dynamic viewport height */
-    padding-bottom: 60px; /* Add safe area padding */
 
     .container {
       height : 100%;
-      width  : 90%;
-      padding: 20px;;
+      width  : 100%;
+      padding: 20px;
 
       h2 {
         font-weight: 600;
         margin     : 20px 0 30px;
       }
 
+      h3 {
+        font-weight  : 600;
+        margin-bottom: 20px;
+      }
+
       .priceContainer {
-        gap: 20px;
-        /* Space between columns */
+        position                  : relative;
+        display                   : flex;
+        /* Arrange items horizontally */
+        width                     : 100%;
+        flex-direction            : row;
+        /* Horizontal layout */
+        overflow-x                : scroll;
+        /* Enable horizontal scrolling */
+        scroll-snap-type          : x mandatory;
+        /* Snap to each item */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on mobile */
+        gap                       : 0;
+        /* Remove gaps between items */
+        scrollbar-width           : none;
+        /* Firefox */
+        margin-top                : 15%;
+        box-shadow                : 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Add shadow */
 
-        .subContainer {
-          display: contents;
-          /* Allow the grid to align the children directly */
+        .priceItem {
+          background-color    : white;
+          flex                : 0 0 90vw;
+          /* Each item takes up the full viewport width */
+          height              : 50vh;
+          /* Optional         : Make each item take up the full viewport height */
+          scroll-snap-align   : start;
+          /* Snap to the start of each item */
+          display             : flex;
+          flex-direction      : column;
+          justify-content     : center;
+          align-items         : center;
+          padding             : 10px;
+          box-sizing          : border-box;
+          border-radius       : 0px;
 
-          padding: 10px 0;
+          p {
+            font-size  : 16px;
+            color      : #343a40;
+            font-weight: 500;
+          }
+        }
+      }
 
-          .priceItem {
-            margin-bottom: 30px;
+      .pagination {
+        position       : absolute;
+        top            : 68%;
+        left           : 50%;
+        /* Center horizontally */
+        transform      : translateX(-50%);
+        /* Adjust for the element's width */
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        gap            : 10px;
+        z-index        : 100;
 
-            p {
-              font-size  : 14px;
-              color      : #343a40;
-              font-weight: 500;
-            }
+        .dot {
+          width           : 9px;
+          height          : 9px;
+          border-radius   : 50%;
+          background-color: var(--color-primary);
+          transition      : background-color 0.3s ease;
+
+          &.active {
+            background-color: black;
+            /* Highlight active dot */
           }
         }
       }

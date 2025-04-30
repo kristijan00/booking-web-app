@@ -1,5 +1,6 @@
 import styles from './popup.module.scss';
 import { useEffect } from 'react';
+import Button from '../button/button';
 
 interface PopupProps {
   title: string;
@@ -23,7 +24,7 @@ const Popup: React.FC<PopupProps> = props => {
       <div className={styles.popupContent}>
         <h3 className={styles.popupTitle}>{props.title}</h3>
         <p className={styles.popupText}>{props.message}</p>
-        <button className={styles.closeButton} onClick={props.onClose}>{props.buttonName}</button>
+        <Button text={props.buttonName} onClick={props.onClose} className={styles.closeButton} />
       </div>
     </div>
   );

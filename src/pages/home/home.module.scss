@@ -70,6 +70,8 @@
 
 @media (max-width: 390px) {
   .mainContainer {
+    height: auto;
+
     .pictureContainer {
       height: calc(100vh - 7.5vh);
 
@@ -84,7 +86,6 @@
           width      : 150px;
           font-size  : 14px;
           font-weight: 500;
-          padding    : 8px 60px;
           animation  : fadeIn 1.5s;
         }
       }
@@ -94,6 +95,8 @@
 
 @media (max-width: 768px) and (min-width: 391px) {
   .mainContainer {
+    height: auto;
+
     .pictureContainer {
       height: calc(100vh - 7.5vh);
 
@@ -108,7 +111,6 @@
           width      : 130px;
           font-size  : 14px;
           font-weight: 500;
-          padding    : 10px 80px;
           animation  : fadeIn 1.5s;
         }
       }

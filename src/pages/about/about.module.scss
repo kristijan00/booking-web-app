@@ -37,6 +37,8 @@
         color           : white;
         border          : none;
         padding         : 10px 20px;
+        text-align      : center;
+        text-decoration : none;
         margin-top      : auto;
         width           : 200px;
         border-radius   : 5px;
@@ -74,9 +76,6 @@
 
 @media (max-width: 768px) and (min-width: 391px) {
   .mainContainer {
-    height: calc(100dvh - 10vh); /* Use dynamic viewport height */
-    padding-bottom: env(safe-area-inset-bottom); /* Add safe area padding */
-
     .container {
       height        : 100%;
       display       : flex;
@@ -114,7 +113,6 @@
           background-color: var(--color-secondary);
           color           : white;
           border          : none;
-          padding         : 10px 20px;
           width           : 200px;
           font-size       : 14px;
           opacity         : 1;
@@ -135,9 +133,6 @@
 
 @media (max-width: 390px) {
   .mainContainer {
-  height: calc(100dvh - 10vh); /* Use dynamic viewport height */
-  padding-bottom: env(safe-area-inset-bottom); /* Add safe area padding */
-
     .container {
       height        : 100%;
       display       : flex;
@@ -167,7 +162,7 @@
 
         .appointmentButton {
           border   : none;
-          padding  : 10px 20px;
+          padding  : 8px 20px;
           width    : 200px;
           font-size: 14px;
           opacity  : 1;

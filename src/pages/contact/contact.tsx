@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { useState } from 'react';
 import Popup from '../../components/popup/popup';
 import Loader from '../../components/loader/loader';
+import Button from '../../components/button/button';
 
 const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -30,12 +31,15 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_kristijan', 'template_3y14uae', e.target as HTMLFormElement, 'XPey2nE5qecJwEz1R')
+      .sendForm(process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        e.target as HTMLFormElement,
+        process.env.REACT_APP_EMAILJS_USER_ID!)
       .then(
         () => {
 
           setPopupTitle('Tack för ditt meddelande!'); // Title for the popup
-          setPopupMessage('Email sent successfully!'); // Success message
+          setPopupMessage('E-postmeddelandet har skickats!'); // Success message
           handleOpenPopup(); // Show the popup after successful email sending
         },
         () => {
@@ -67,7 +71,7 @@ const Contact = () => {
               </div>
 
               <div className={styles.field} style={{ '--count': 2 } as React.CSSProperties}>
-                <label htmlFor="lastName">Last Name</label><br />
+                <label htmlFor="lastName">Efternamn</label><br />
                 <input type="text" name="lastName" required /><br />
               </div>
             </div>
@@ -81,7 +85,7 @@ const Contact = () => {
               <label htmlFor="message">Meddelande</label><br />
               <textarea id="message" name="message" rows={4} required></textarea><br />
             </div>
-            <button className={styles.contactButton} type="submit">Skicka</button>
+            <Button text="Skicka" className={styles.contactButton} type="submit"></Button>
           </form>
         </div>
       </div>

@@ -31,7 +31,6 @@ const Header = () => {
             <li className={styles.navItem} onClick={handleNavItemClick}><NavLink className={({ isActive }) => isActive ? styles.activeLink : ''} to={'/price'}>Price</NavLink></li>
           </ul>
         </nav>
-        {/* <button className={styles.appointmentButton}>Appointment</button> */}
         <Link to={'/contact'} className={styles.appointmentButton}>Boka tid</Link>
       </div>
     </div>

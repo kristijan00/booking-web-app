@@ -2,14 +2,12 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import './themes/variables.css';
 import './index.css';
 import Home from './pages/home/home';
-// import Login from './pages/login/login';
 import About from './pages/about/about';
 import Header from './components/header/header';
 import Contact from './pages/contact/contact';
 import Price from './pages/price/price';
 
 const App: React.FC = () => {
-  // const navigate = useNavigate();
 
   return (
     <>

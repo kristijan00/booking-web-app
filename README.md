@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+💈 Barbershop Web Application
+This is a small, fast-loading web application built with React, TypeScript, and Vite for a local barbershop. The app is designed to present essential business information in a clean and responsive layout, including:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✂️ About Section – Introducing the barber and their background.
 
-Currently, two official plugins are available:
+💵 Price List – Clear and organized pricing for different services.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📬 Contact Form – A simple and accessible way for customers to reach out.
 
-## Expanding the ESLint configuration
+The goal of the app is to provide a modern and mobile-friendly web presence for the barbershop, making it easier for clients to learn about the services offered and get in touch.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+🛠 Tech Stack
+React – For building a responsive, component-based UI
 
-- Configure the top-level `parserOptions` property like this:
+TypeScript – For type-safe development and improved maintainability
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Vite – For fast builds and an optimized development experience
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+SCSS Modules - For component styling
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+EmailJS – For handling contact form submissions
