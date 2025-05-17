@@ -8,9 +8,10 @@ const Price = () => {
   const handleScroll = () => {
     const container = containerRef.current;
     if (container) {
-      const scrollLeft = container.scrollLeft; // Current horizontal scroll position
-      const cardWidth = container.offsetWidth; // Width of each card
-      const currentIndex = Math.round(scrollLeft / cardWidth); // Calculate the active card index
+      const scrollLeft = container.scrollLeft;
+      const firstCard = container.querySelector(`.${styles.priceItem}`) as HTMLElement;
+      const cardWidth = firstCard ? firstCard.offsetWidth : container.offsetWidth;
+      const currentIndex = Math.round(scrollLeft / cardWidth);
       setActiveIndex(currentIndex);
     }
   };
