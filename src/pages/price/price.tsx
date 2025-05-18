@@ -11,7 +11,9 @@ const Price = () => {
       const scrollLeft = container.scrollLeft;
       const firstCard = container.querySelector(`.${styles.priceItem}`) as HTMLElement;
       const cardWidth = firstCard ? firstCard.offsetWidth : container.offsetWidth;
-      const currentIndex = Math.round(scrollLeft / cardWidth);
+      // Add a threshold so the index only changes after passing 60% of a card
+      const threshold = 0.6;
+      const currentIndex = Math.floor((scrollLeft + cardWidth * threshold) / cardWidth);
       setActiveIndex(currentIndex);
     }
   };
